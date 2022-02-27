@@ -7,7 +7,7 @@ Image Registration Framework (Colab):
 ## Implementation
 The considered MRI volumes are of 2 different MRI modalities, namely T1-Weighted MRI and T2-Weighted MRI. For the task of registration,T1-Weighted MRI volume is used as the Fixed Image to which T2-Weighted MRI volume (Moving Image) is registered. 
 
-                        Fixed Image                                           Moving Image
+                        Fixed Image                                         Moving Image
 
 <img src="https://github.com/Vinith-Kugathasan/Image-Registration-with-ITK/blob/main/Images/fixed_image.gif" width="400"/> <img src="https://github.com/Vinith-Kugathasan/Image-Registration-with-ITK/blob/main/Images/moving_image.gif" width="400"/>
 
