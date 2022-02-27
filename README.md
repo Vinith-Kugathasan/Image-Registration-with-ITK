@@ -2,11 +2,14 @@
 This repository contains implementation of a python script to perform image registration on two MRI volumes of different contrasts. ITK is used to implement the registration framework and 3D Slicer is used for performance evaluation. Registration framework consists of four distinct components namely, transform, metric, interpolator and optimizer. For each element, appropriate function was selected based on theoretical explanation and trial-and-error analysis.
 
 Image Registration Framework (Colab): 
-[![Open In Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/Vinith-Kugathasan/Image-Registration-with-ITK/blob/main/ITK_Registration.ipynb)
+[![Open In Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1UJdb0eVk-lEVkqC6iriCei44O4tMYItt#scrollTo=6Pk4pRHRugXq)
 
 ## Implementation
 The considered MRI volumes are of 2 different MRI modalities, namely T1-Weighted MRI and T2-Weighted MRI. For the task of registration,T1-Weighted MRI volume is used as the Fixed Image to which T2-Weighted MRI volume (Moving Image) is registered. 
-![Fixed and moving images.png](Images/Fixed_and_moving_images.png)
+                    Fixed Image                           Moving Image
+
+<img src="https://github.com/Vinith-Kugathasan/Image-Registration-with-ITK/blob/main/Images/fixed_image.gif" width="400"/> <img src="https://github.com/Vinith-Kugathasan/Image-Registration-with-ITK/blob/main/Images/moving_image.gif" width="400"/>
+
 ### Registration Framework
 Following are the components and the corresponding functions utilized for the implemented registration framework.
 
