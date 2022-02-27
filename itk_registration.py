@@ -39,11 +39,12 @@ identityTransform = TransformType.New()
 identityTransform.SetIdentity()
 
 # Interpolator
+# interpolator = itk.NearestNeighborInterpolateImageFunction[FixedImageType,itk.D]
 interpolator = itk.LinearInterpolateImageFunction[FixedImageType,itk.D]
 
 # Metric
-MetricType = itk.MattesMutualInformationImageToImageMetricv4[FixedImageType, MovingImageType]
-metric = MetricType.New()
+# metric = itk.MeanSquaresImageToImageMetricv4[FixedImageType, MovingImageType].New()
+metric = itk.MattesMutualInformationImageToImageMetricv4[FixedImageType, MovingImageType].New()
 
 numberOfBins = 24
 metric.SetNumberOfHistogramBins(numberOfBins)
@@ -64,6 +65,14 @@ registration.SetFixedInitialTransform(identityTransform)
 registration.SetNumberOfLevels(1)
 registration.SetSmoothingSigmasPerLevel([0])
 registration.SetShrinkFactorsPerLevel([1])
+
+# registration.SetNumberOfLevels(2)
+# registration.SetSmoothingSigmasPerLevel([0, 0])
+# registration.SetShrinkFactorsPerLevel([1, 2])
+
+# registration.SetNumberOfLevels(3)
+# registration.SetSmoothingSigmasPerLevel([0, 0, 0])
+# registration.SetShrinkFactorsPerLevel([1, 2, 3])
 
 params = []
 def iterationUpdate():
