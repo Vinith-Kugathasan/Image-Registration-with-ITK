@@ -74,7 +74,7 @@ python .\itk_registration.py .\Data\VF-MRT1-1014-1174.vtk .\Data\VF-MRT2-1014-11
 ![Composite output comparison 2.png](Images/Composite_output_comparison_2.png)
 ![Composite output comparison 3.png](Images/Composite_output_comparison_3.png)
 
-                    Before Registration                                       After Registration
+                    Before Registration                                      After Registration
 
 <img src="https://github.com/Vinith-Kugathasan/Image-Registration-with-ITK/blob/main/Images/before_registration_image.gif" width="400"/> <img src="https://github.com/Vinith-Kugathasan/Image-Registration-with-ITK/blob/main/Images/after_registration_image.gif" width="400"/>
 
