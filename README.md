@@ -54,6 +54,9 @@ registration.SetShrinkFactorsPerLevel([1])
 ```
 
 ### Optimization
+```
+python .\itk_registration.py .\Data\VF-MRT1-1014-1174.vtk .\Data\VF-MRT2-1014-1174.vtk .\Data\
+```
 ![Optimizer update.jpg](Images/Optimizer_update.jpg)
 ![Metric vs iterations.png](Images/Metric_vs_iter.png)
 ![Translations vs iterations.png](Images/Translations_vs_iter.png)
