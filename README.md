@@ -1,5 +1,5 @@
 # Image-Registration-with-ITK
-This repository contains implementation of a python script to perform image registration on two MRI volumes of different contrast. ITK was used to implement the registration framework and 3D Slicer was used for performance evaluation. Registration framework consists of three distinct components namely, transform, metric and optimizer. For each element, appropriate function was selected based on theoretical explanation and trial-and-error analysis.
+This repository contains implementation of a python script to perform image registration on two MRI volumes of different contrasts. ITK is used to implement the registration framework and 3D Slicer is used for performance evaluation. Registration framework consists of four distinct components namely, transform, metric, interpolator and optimizer. For each element, appropriate function was selected based on theoretical explanation and trial-and-error analysis.
 
 ## Implementation
 The considered MRI volumes are of 2 different MRI modalities, namely T1-Weighted MRI and T2-Weighted MRI. For the task of registration,T1-Weighted MRI volume is used as the Fixed Image to which T2-Weighted MRI volume (Moving Image) is registered. 
@@ -21,6 +21,10 @@ movingInitialTransform.SetParameters(initialParameters)
 identityTransform = TransformType.New()
 identityTransform.SetIdentity()
 ```
+- Interopolator : itk.LinearInterpolateImageFunction
+```
+interpolator = itk.LinearInterpolateImageFunction[FixedImageType,itk.D]
+```
 - Metric : itk.MattesMutualInformationImageToImageMetricv4
 ```
 MetricType = itk.MattesMutualInformationImageToImageMetricv4[FixedImageType, MovingImageType]
@@ -30,6 +34,8 @@ numberOfBins = 24
 metric.SetNumberOfHistogramBins(numberOfBins)
 metric.SetUseMovingImageGradientFilter(False)
 metric.SetUseFixedImageGradientFilter(False)
+metric.SetFixedInterpolator(interpolator.New())
+metric.SetMovingInterpolator(interpolator.New())
 ```
 - Optimizer : itk.RegularStepGradientDescentOptimizerv4
 ```
@@ -65,3 +71,11 @@ registration.SetShrinkFactorsPerLevel([1])
 ![Fixed vs Registered.jpg](Images/Fixed_vs_Registered.jpg)
 #### Moving Image vs Registered Image
 ![Moving vs Registered.jpg](Images/Moving_vs_Registered.jpg)
+
+### More Qualitative Comparisons
+![Output comparison 2.png](Images/Output_comparison_2.png)
+![Output comparison 3.png](Images/Output_comparison_3.png)
+![Output comparison 4.png](Images/Output_comparison_4.png)
+![Output comparison 5.png](Images/Output_comparison_5.png)
+![Output comparison 6.png](Images/Output_comparison_6.png)
+![Output comparison 7.png](Images/Output_comparison_7.png)
