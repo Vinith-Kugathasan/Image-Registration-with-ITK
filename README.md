@@ -75,10 +75,16 @@ python .\itk_registration.py .\Data\VF-MRT1-1014-1174.vtk .\Data\VF-MRT2-1014-11
 
 ### Slicer 3D Analysis
 #### Fixed Image vs Moving Image
+<img src="https://github.com/Vinith-Kugathasan/Image-Registration-with-ITK/blob/main/Images/Fixed_vs_Moving.gif" width="400"/>
+
 ![Fixed vs Moving.jpg](Images/Fixed_vs_moving.jpg)
 #### Fixed Image vs Registered Image
+<img src="https://github.com/Vinith-Kugathasan/Image-Registration-with-ITK/blob/main/Images/Fixed_vs_Registered.gif" width="400"/>
+
 ![Fixed vs Registered.jpg](Images/Fixed_vs_Registered.jpg)
 #### Moving Image vs Registered Image
+<img src="https://github.com/Vinith-Kugathasan/Image-Registration-with-ITK/blob/main/Images/Moving_vs_Registered.gif" width="400"/>
+
 ![Moving vs Registered.jpg](Images/Moving_vs_Registered.jpg)
 
 ### More Qualitative Comparisons
