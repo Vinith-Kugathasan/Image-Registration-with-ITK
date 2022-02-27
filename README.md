@@ -1,5 +1,5 @@
 # Image-Registration-with-ITK
-This repository contains implementation of a python script to perform image registration on two MRI volumes of different contrasts. ITK is used to implement the registration framework and 3D Slicer is used for performance evaluation. Registration framework consists of four distinct components namely, transform, metric, interpolator and optimizer. For each element, appropriate function was selected based on theoretical explanation and trial-and-error analysis.
+This repository contains implementation of a python script to perform image registration on two MRI volumes of different contrasts, acquired from the same subject as a part of Female dataset of Visible Human Project. ITK is used to implement the registration framework and 3D Slicer is used for performance evaluation. The implemented registration framework consists of four distinct components namely, transform, metric, interpolator and optimizer. For each element, appropriate function was selected based on theoretical explanation and trial-and-error analysis.
 
 Image Registration Framework (Colab): 
 [![Open In Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1UJdb0eVk-lEVkqC6iriCei44O4tMYItt#scrollTo=6Pk4pRHRugXq)
@@ -23,6 +23,7 @@ movingInitialTransform = TransformType.New()
 initialParameters = movingInitialTransform.GetParameters()
 initialParameters[0] = 0
 initialParameters[1] = 0
+initialParameters[2] = 0
 movingInitialTransform.SetParameters(initialParameters)
 
 identityTransform = TransformType.New()
